@@ -1,11 +1,11 @@
 import React from 'react';
 
-const displayRepoList = () => {
+const displayRepoList = (props) => {
 
-  return(
+  return (
     <div>
       <h1>Screen 2</h1>
-      <p>username x</p>
+      <p>{props.match.params.username}'s repository</p>
       <ul>
         <li>the list elements goes here</li>
       </ul>

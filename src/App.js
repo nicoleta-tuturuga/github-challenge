@@ -8,11 +8,10 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
-      <h1>Hi Nico</h1>
       
         <Switch>
           <Route exact path='/' component={SearchUser} />
-          <Route path='/displayRepo' component={DisplayRepoList} />
+          <Route path='/displayRepo/:username' component={DisplayRepoList} />
         </Switch>
 
       </BrowserRouter>
