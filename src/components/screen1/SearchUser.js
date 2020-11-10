@@ -11,7 +11,7 @@ class SearchUser extends Component {
     userValue: ''
   }
 
-  handleSubmitUserName = (event) => {
+  updateUserName = (event) => {
     this.setState({ userValue: event.target.value });
   }
 
@@ -30,7 +30,7 @@ class SearchUser extends Component {
             className="search-user-input list-item-style"
             type="text"
             value={this.state.userValue}
-            onChange={this.handleSubmitUserName}
+            onChange={this.updateUserName}
             placeholder="Search repository..."
           />
           <Link to={`/displayRepo/${userInputValue}`}>
