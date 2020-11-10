@@ -1,0 +1,39 @@
+/* .search-repository-screen {
+  background-color: rgb(236, 235, 234);
+} */
+
+.search-user-container {
+  margin-top: 4rem;
+  width: 80%;
+}
+
+.search-user-input {
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+  width: 50%;
+  min-width: 15rem;
+}
+
+.search-user-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 700;
+}
+
+.disabled-search-user-btn {
+  background-color: rgb(182, 181, 181);
+  cursor: not-allowed;
+}
+
+.enabled-search-user-btn {
+  background-color: rgb(37, 37, 37);
+  color: #ffffff;
+
+}
+
+.enabled-search-user-btn:hover {
+  background-color: rgb(56, 56, 56);
+  transform: scale(1.1);
+  transition: 300ms;
+}
