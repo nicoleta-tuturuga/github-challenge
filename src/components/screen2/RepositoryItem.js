@@ -25,7 +25,11 @@ class repositoryItem extends Component {
         <li
           key={this.props.repo.id}
           className="repository-card list-item-style">
-          <span className="close-user-details">x</span>
+          <span
+            className={"close-user-details " +
+              (this.state.isVisible ? 'user-details-visible' : 'user-details-hidden')}>
+            x
+          </span>
           <div className="d-flex justify-content-between">
             <span>{this.props.repo.name}</span>
             <span>{this.props.repo.stargazers_count ? this.props.repo.stargazers_count : ''}

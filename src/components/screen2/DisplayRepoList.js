@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import '../sharedCss/shared.css';
 import './DisplayRepoList.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import RepositoryItem from './RepositoryItem';
+
 
 class displayRepoList extends Component {
 
@@ -42,6 +43,7 @@ class displayRepoList extends Component {
       )
   }
 
+
   render() {
 
     let repository = this.state.repositories
@@ -49,15 +51,7 @@ class displayRepoList extends Component {
       .slice(0, 10)
       .map(repo => {
         return (
-          <li
-            key={repo.id}
-            className="repository-card list-item-style d-flex justify-content-between">
-            <span>{repo.name}</span>
-            <div>
-              <span>{repo.stargazers_count}</span>
-              <FontAwesomeIcon icon="star" color={"yellow"}></FontAwesomeIcon>
-            </div>
-          </li>
+          <RepositoryItem repo={repo} />
         )
       })
 
@@ -65,20 +59,22 @@ class displayRepoList extends Component {
     let pageContent;
 
     if (this.state.error) {
-      pageContent = <h1>The page doesn't exist.</h1>
-    } else if (!this.state.isLoaded) {
-      pageContent = <h1>Page is loading...Please wait</h1>
+      pageContent = <h2 className="message">Something went wrong. This page doesn't exist.</h2>
+    }
+    else if (!this.state.isLoaded) {
+      pageContent = <h2 className="message">Page is loading...Please wait</h2>
     } else if (this.state.isLoaded && this.state.repositories.length === 0) {
-      pageContent = <h1>The user doesn't have any repositories yet or the user's repositories are private.</h1>
-    } else {
+      pageContent = <h2 className="message">The user doesn't have any repositories yet or the user's repositories are private.</h2>
+    }
+    else {
       pageContent =
-        <ul>
+        <ul className="repository-card-list">
           {repository}
         </ul>
     }
 
     return (
-      <div className="screen-container repository-list-screen">
+      <div className="screen-container repository-list-screen ">
         <p>{this.props.match.params.username}'s repository</p>
         <div>{pageContent}</div>
       </div>

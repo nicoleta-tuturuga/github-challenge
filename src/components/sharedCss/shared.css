@@ -1,3 +1,6 @@
+* {
+  font-weight: 700;
+}
 .screen-container {
   min-height: 100vh;
   display: flex;
@@ -10,4 +13,8 @@
   background-color: rgb(179, 175, 172);
   border-radius: 1rem;
   border: none;
+}
+
+.message {
+  text-align: center;
 }

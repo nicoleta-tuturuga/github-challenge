@@ -6,9 +6,10 @@ import DarkMode from './components/light-dark-mode/DarkMode';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faStar } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faStar);
+library.add(faEye);
 
 function App() {
   return (

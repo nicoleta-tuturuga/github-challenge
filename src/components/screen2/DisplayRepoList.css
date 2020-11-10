@@ -1,20 +1,29 @@
 .repository-list-screen {
-  padding: 5rem;
+  padding: 3rem;
+}
+
+.repository-list-screen>p {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .repository-card-container {
   width: 100%;
 }
 
-.repository-card {
-  list-style-type: none;
-  margin-bottom: 0.5rem;
-  padding: 1.3rem 2rem;
-  min-width: 40rem;
-  cursor: pointer;
+.repository-card-list {
+  padding-left: 0;
 }
 
-.repository-card:hover {
-  transform: scale(1.1);
-  transition: 300ms;
+
+@media only screen and (min-width: 768px) { 
+  .repository-list-screen {
+    padding: 5rem;
+  }
+  .repository-list-screen>p {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
 }
