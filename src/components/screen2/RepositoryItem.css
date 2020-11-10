@@ -1,0 +1,59 @@
+.repository-card {
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+  padding: 1.3rem 2rem;
+  min-width: 15rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.repository-card:hover {
+  transform: scale(1.1);
+  transition: 300ms;
+}
+
+.close-user-details {
+  position: absolute;
+  top: 0.2rem;
+  right: 1rem;
+}
+
+.star-icon {
+  margin-left: 0.5rem;
+}
+
+.eye-icon {
+  margin-right: 0.5rem;
+}
+
+.user-details-visible {
+  visibility: visible;
+}
+
+.user-details-hidden {
+  display: none;
+}
+
+.user-details>p{
+  margin: 0.8rem 0;
+}
+
+.user-details a {
+  color: #222222;
+  text-decoration: none;
+}
+
+.user-details a:hover {
+  color: #222222;
+}
+
+.user-avatar {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media only screen and (min-width: 768px) { 
+  .repository-card {
+    padding: 1.3rem 3rem;
+  }
+}
