@@ -12,14 +12,20 @@ class displayRepoList extends Component {
   }
 
   state = {
-    error: null,
+    error: false,
     isLoaded: false,
     repositories: []
   }
 
   componentDidMount() {
     fetch(`https://api.github.com/users/${this.props.match.params.username}/repos`)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("error")
+        } else {
+          return response.json();
+        }
+      })
       .then(
         (result) => {
           this.setState({
@@ -30,7 +36,7 @@ class displayRepoList extends Component {
         (error) => {
           this.setState({
             isLoaded: true,
-            error
+            error: true
           });
         }
       )
@@ -55,7 +61,6 @@ class displayRepoList extends Component {
         )
       })
 
-    console.log("repo sorted: ", repository)
 
     let pageContent;
 
@@ -63,6 +68,8 @@ class displayRepoList extends Component {
       pageContent = <h1>The page doesn't exist.</h1>
     } else if (!this.state.isLoaded) {
       pageContent = <h1>Page is loading...Please wait</h1>
+    } else if (this.state.isLoaded && this.state.repositories.length === 0) {
+      pageContent = <h1>The user doesn't have any repositories yet or the user's repositories are private.</h1>
     } else {
       pageContent =
         <ul>
@@ -77,7 +84,6 @@ class displayRepoList extends Component {
       </div>
     )
   }
-
 }
 
 export default displayRepoList;
