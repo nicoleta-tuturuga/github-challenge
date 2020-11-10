@@ -55,5 +55,6 @@
 @media only screen and (min-width: 768px) { 
   .repository-card {
     padding: 1.3rem 3rem;
+    min-width: 30rem;
   }
 }

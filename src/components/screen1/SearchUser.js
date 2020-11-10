@@ -5,7 +5,7 @@ import './SearchUser.css';
 
 import { Link } from 'react-router-dom';
 
-class searchUser extends Component {
+class SearchUser extends Component {
 
   state = {
     userValue: ''
@@ -50,4 +50,4 @@ class searchUser extends Component {
   }
 }
 
-export default searchUser;
+export default SearchUser;

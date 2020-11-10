@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 
 import '../sharedCss/shared.css';
-import './DisplayRepoList.css';
+import './RepositoryList.css';
 
 import RepositoryItem from './RepositoryItem';
 
 
-class displayRepoList extends Component {
-
-  constructor(props) {
-    super(props);
-  }
+class RepositoryList extends Component {
 
   state = {
     error: false,
@@ -51,7 +47,7 @@ class displayRepoList extends Component {
       .slice(0, 10)
       .map(repo => {
         return (
-          <RepositoryItem repo={repo} />
+          <RepositoryItem repo={repo} key={repo.id} />
         )
       })
 
@@ -82,4 +78,4 @@ class displayRepoList extends Component {
   }
 }
 
-export default displayRepoList;
+export default RepositoryList;

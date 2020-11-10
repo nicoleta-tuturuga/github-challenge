@@ -9,12 +9,9 @@
   text-align: center;
 }
 
-.repository-card-container {
-  width: 100%;
-}
-
 .repository-card-list {
   padding-left: 0;
+  width: 100%;
 }
 
 

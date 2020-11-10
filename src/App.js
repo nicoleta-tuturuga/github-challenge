@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import SearchUser from './components/screen1/SearchUser';
-import DisplayRepoList from './components/screen2/DisplayRepoList';
+import RepositoryList from './components/screen2/RepositoryList';
 import DarkMode from './components/light-dark-mode/DarkMode';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -20,7 +20,7 @@ function App() {
 
         <Switch>
           <Route exact path='/' component={SearchUser} />
-          <Route path='/displayRepo/:username' component={DisplayRepoList} />
+          <Route path='/displayRepo/:username' component={RepositoryList} />
         </Switch>
 
         <FontAwesomeIcon />

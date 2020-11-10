@@ -6,10 +6,6 @@ import './RepositoryItem.css';
 
 class repositoryItem extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     isVisible: false
   }
@@ -21,9 +17,10 @@ class repositoryItem extends Component {
   render() {
 
     return (
-      <div onClick={this.toggleVisibility}>
+      <div
+        key={this.props.repo.id}
+        onClick={this.toggleVisibility}>
         <li
-          key={this.props.repo.id}
           className="repository-card list-item-style">
           <span
             className={"close-user-details " +
