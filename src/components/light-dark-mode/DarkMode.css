@@ -1,10 +1,22 @@
 .toggle-theme-btn {
   background-color: transparent;
   position: absolute;
-  top: 6rem;
-  right: 5rem;
+  top: 3rem;
+  right: 0;
   height: 3rem;
   width: 3rem;
   cursor: pointer;
   border: none;
+}
+
+.toggle-theme-btn:focus {
+  outline: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .toggle-theme-btn {
+    right: 3rem;
+    height: 4rem;
+    width: 4rem;
+  }
 }
