@@ -1,5 +1,4 @@
 .screen-container {
-  background-color: rgb(236, 235, 234);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,7 +7,7 @@
 }
 
 .list-item-style {
-  background-color: rgb(223, 216, 210);
+  background-color: rgb(179, 175, 172);
   border-radius: 1rem;
   border: none;
 }

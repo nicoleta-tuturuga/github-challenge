@@ -17,8 +17,8 @@
 .search-user-btn {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  border: none;
   font-weight: 700;
+  border: 3px solid rgb(56, 56, 56);
 }
 
 .disabled-search-user-btn {
@@ -27,7 +27,7 @@
 }
 
 .enabled-search-user-btn {
-  background-color: rgb(37, 37, 37);
+  background-color: #222222;
   color: #ffffff;
 
 }

@@ -1,0 +1,10 @@
+.toggle-theme-btn {
+  background-color: transparent;
+  position: absolute;
+  top: 6rem;
+  right: 5rem;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  border: none;
+}
