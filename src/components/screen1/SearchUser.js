@@ -13,8 +13,6 @@ class searchUser extends Component {
 
   handleSubmitUserName = (event) => {
     this.setState({ userValue: event.target.value });
-
-    console.log("value in state is ", this.state.userValue);
   }
 
   render() {
@@ -23,7 +21,10 @@ class searchUser extends Component {
 
     return (
       <div className="screen-container search-repository-screen">
-        <h4>Enter a valid </h4><h1>Github username </h1>
+        <div className="search-title d-flex flex-column">
+          <span>enter a valid</span>
+          <span className="search-title-span">Github username</span>
+        </div>
         <div className="search-user-container d-flex flex-column align-items-center">
           <input
             className="search-user-input list-item-style"
@@ -36,7 +37,7 @@ class searchUser extends Component {
             <button
               className={
                 "search-user-btn " +
-               (userInputValue ? 'enabled-search-user-btn' : 'disabled-search-user-btn')
+                (userInputValue ? 'enabled-search-user-btn' : 'disabled-search-user-btn')
               }
               disabled={!userInputValue}
             >

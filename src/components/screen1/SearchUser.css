@@ -1,9 +1,18 @@
-/* .search-repository-screen {
-  background-color: rgb(236, 235, 234);
-} */
+.search-repository-screen {
+  padding: 2rem;
+}
+
+.search-title {
+  font-size: 1.5rem;
+  padding: 0 2rem;
+}
+
+.search-title-span {
+  font-size: 2.5rem;
+}
 
 .search-user-container {
-  margin-top: 4rem;
+  margin-top: 1.5rem;
   width: 80%;
 }
 
@@ -14,11 +23,19 @@
   min-width: 15rem;
 }
 
+.search-user-input:focus {
+  outline: none;
+}
+
 .search-user-btn {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  font-weight: 700;
   border: 3px solid rgb(56, 56, 56);
+  min-width: 15rem;
+}
+
+.search-user-btn:focus {
+  outline: none;
 }
 
 .disabled-search-user-btn {
@@ -29,11 +46,22 @@
 .enabled-search-user-btn {
   background-color: #222222;
   color: #ffffff;
-
 }
 
 .enabled-search-user-btn:hover {
   background-color: rgb(56, 56, 56);
   transform: scale(1.1);
   transition: 300ms;
+}
+
+@media only screen and (min-width: 768px) {
+  .search-title {
+    font-size: 2rem;
+  }
+  .search-title-span {
+    font-size: 3.5rem;
+  }
+  .search-user-container {
+    margin-top: 4rem;
+  }
 }
